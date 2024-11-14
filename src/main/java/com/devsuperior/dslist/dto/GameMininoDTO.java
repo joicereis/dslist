@@ -14,7 +14,7 @@ public class GameMininoDTO {
 	}
 
 	public GameMininoDTO(Game entity) {
-		id = entity.getId(); //busca o id da entitidade e salva no id do DTO
+		id = entity.getId(); //busca o id da entitidade Game e salva no id do DTO
 		title = entity.getTitle();
 		year = entity.getYear();
 		imgUrl = entity.getImgUrl();
@@ -40,6 +40,5 @@ public class GameMininoDTO {
 	public String getShortDescription() {
 		return shortDescription;
 	}
-	
 	
 }
