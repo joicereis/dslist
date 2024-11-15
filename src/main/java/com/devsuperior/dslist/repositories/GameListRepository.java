@@ -5,5 +5,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.devsuperior.dslist.entities.GameList;
 
 public interface GameListRepository extends JpaRepository<GameList, Long>{ //parâmetros: entidade e o tipo do elemento id da entidade utilizada para acessar o banco
-	
-}
+	}

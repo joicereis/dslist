@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.devsuperior.dslist.dto.GameDTO;
 import com.devsuperior.dslist.dto.GameMininoDTO;
+import com.devsuperior.dslist.projection.GameMinProjection;
 import com.devsuperior.dslist.repositories.GameRepository;
 
 
@@ -30,4 +31,11 @@ public class GameService {
 		GameDTO dto = new GameDTO(result);
 		return dto;
 	}
+	
+	@Transactional(readOnly = true)
+	public List<GameMininoDTO> findByList(Long listId){
+		List<GameMinProjection> result = gameRepository.searchByList(listId); //método que busca todos os dados do banco
+		return result.stream().map(x -> new GameMininoDTO(x)).toList();
+	}
+	
 }
