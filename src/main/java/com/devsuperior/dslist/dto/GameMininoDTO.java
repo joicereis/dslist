@@ -25,7 +25,7 @@ public class GameMininoDTO {
 	public GameMininoDTO(GameMinProjection projection) {
 		id = projection.getId(); //busca o id da entitidade Game e salva no id do DTO
 		title = projection.getTitle();
-		year = projection.getYear();
+		year = projection.getGameYear();
 		imgUrl = projection.getImgUrl();
 		shortDescription = projection.getShortDescription();
 	}
