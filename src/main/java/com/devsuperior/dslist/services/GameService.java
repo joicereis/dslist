@@ -34,7 +34,7 @@ public class GameService {
 	
 	@Transactional(readOnly = true)
 	public List<GameMininoDTO> findByList(Long listId){
-		List<GameMinProjection> result = gameRepository.searchByList(listId); //método que busca todos os dados do banco
+		List<GameMinProjection> result = gameRepository.searchByList(listId);
 		return result.stream().map(x -> new GameMininoDTO(x)).toList();
 	}
 	
